@@ -5,7 +5,7 @@
 }
 
 body {
-  font-size: 14px;
+  font-size: 16px;
   background-color: rgba(86, 94, 86, 0.44);
 
 }
@@ -23,20 +23,22 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* margin-top: -300px;
-  margin-left: -450px; */
+
 }
+
 .float-left {
   float: left;
   height: 100%;
   width: 300px;
-  background-color: lightgrey;
+
+  /* background-color: lightgrey; */
 }
 .float-right {
   float:right;
   height: 100%;
   width: 600px;
   background-color: #e5ddd5;
+  overflow-y: scroll;
 }
 .wrapper::after {
   content:'';
@@ -46,24 +48,114 @@ body {
 .icons {
   width: 300px;
   height: 80px;
-  background-color: pink;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: row;
 
 }
+.box-1 {
+  padding: 5px;
+  width: 250px;
+  margin-top: 15px;
+  line-height: 20px;
+}
+.box-2 {
+  margin-top: 20px;
+  margin-left: 100px;
+  padding-top: 5px;
+  padding-left: 40px;
+  width: 250px;
+  line-height: 20px;
+
+}
+.icon-plus {
+  display: inline;
+  color: grey;
+  padding-top: 10px;
+  vertical-align: middle;
+  width: 40px;
+}
+span {
+  padding: 3px;
+}
+.avatar {
+  width: 40%;
+  vertical-align: middle;
+}
+
 .notifications {
   width: 300px;
   height: 80px;
-  background-color: orange;
+  background-color: lightblue;
+}
+.ring-bell {
+  width: 100%;
+  line-height: 20px;
+}
+.bell {
+  width: 20%;
+  height: 20%;
+  vertical-align: middle;
+  padding: 20px 20px;
+  font-size: 30px;
+  color: white;
+}
+.selezione {
+ padding-left: 10px;
+ vertical-align: middle;
+ font-size: 14px;
+ font-weight: bold;
 }
 .search {
   width: 300px;
   height: 40px;
-  background-color: red;
+  background-color: white;
+  ;
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin: 5px 0;
+  /* margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px; */
+  border: 1px solid lightgrey;
+}
+.icon-search {
+  padding: 10px;
+  background: white;
+  color: grey;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input {
+  width: 280px;
+  margin: 10px;
+  border: 1px solid grey;
 }
 .list-contacts {
   width: 300px;
   height: 500px;
-  background-color: yellow;
+  padding: 5px;
+  border: 2px solid grey;
+  /* background-color: yellow; */
+  overflow-y: scroll;
 }
+.first-contact {
+  width: 280px;
+  height: 60px;
+  margin: 3px;
+  border: 1px solid lightgrey;
+}
+
+
+
+
+
+
 .contact {
   width: 600px;
   height: 80px;

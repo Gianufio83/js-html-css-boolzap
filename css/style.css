@@ -212,6 +212,7 @@ span {
   width: 600px;
   height: 530px;
   opacity: 0.5;
+
 }
 .conversation {
 
@@ -262,4 +263,10 @@ span {
   vertical-align: middle;
   font-size: 30px;
   color: grey;
+}
+.template {
+  display:none;
+  max-width: 20%;
+  max-height: 50%;
+  background-color: green;
 }

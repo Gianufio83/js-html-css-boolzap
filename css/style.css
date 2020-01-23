@@ -19,27 +19,66 @@ body {
   width: 900px;
   height: 700px;
   background: white;
-  margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -300px;
-  margin-left: -450px;
+  transform: translate(-50%, -50%);
+  /* margin-top: -300px;
+  margin-left: -450px; */
 }
 .float-left {
   float: left;
-  height: 700px;
+  height: 100%;
   width: 300px;
   background-color: lightgrey;
 }
 .float-right {
   float:right;
-  height: 700px;
+  height: 100%;
   width: 600px;
-  background-color: lightblue;
+  background-color: #e5ddd5;
 }
 .wrapper::after {
   content:'';
   display:table;
   clear:both;
+}
+.icons {
+  width: 300px;
+  height: 80px;
+  background-color: pink;
+
+}
+.notifications {
+  width: 300px;
+  height: 80px;
+  background-color: orange;
+}
+.search {
+  width: 300px;
+  height: 40px;
+  background-color: red;
+}
+.list-contacts {
+  width: 300px;
+  height: 500px;
+  background-color: yellow;
+}
+.contact {
+  width: 600px;
+  height: 80px;
+  background-color: lightblue;
+}
+.bg-conversation {
+  width: 600px;
+  height: 530px;
+  opacity: 0.5;
+}
+.conversation {
+
+}
+.message {
+  width: 600px;
+  height: 85px;
+  background-color: green;
 }

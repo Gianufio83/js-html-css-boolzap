@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  background-color: rgba(86, 94, 86, 0.44);
+
+}
+.big-header {
+  width: 100%:auto;
+  height: 100px;
+  background-color: rgb(33, 142, 119);
+  position: relative;
+}
+.wrapper {
+  
+  width: 900px;
+  height: 700px;
+  background: #25FF00;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -450px;
+
+}

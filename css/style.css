@@ -75,9 +75,9 @@ body {
   vertical-align: middle;
   width: 40px;
 }
-span {
+/* span {
   padding: 3px;
-}
+} */
 .avatar {
   width: 40%;
   vertical-align: middle;
@@ -87,24 +87,38 @@ span {
   width: 300px;
   height: 80px;
   background-color: lightblue;
+  display: flex;
+  align-items: center;
+
 }
 .ring-bell {
-  width: 100%;
+  width: 50px;
+  height: 50px;
   line-height: 20px;
+  margin-left: 5px;
+  padding: 5px;
+  background-color: white;
+  color: lightblue;
+  text-align: center;
+  margin-right: 5px;
+  border-radius: 50px;
 }
 .bell {
-  width: 20%;
-  height: 20%;
   vertical-align: middle;
-  padding: 20px 20px;
   font-size: 30px;
-  color: white;
+}
+.notifications-text {
+  padding: 5px;
 }
 .selezione {
- padding-left: 10px;
+ /* padding-left: 10px; */
  vertical-align: middle;
  font-size: 14px;
  font-weight: bold;
+}
+.link-selection {
+  color:grey;
+  font-size: 10px;
 }
 .search {
   width: 300px;
@@ -117,10 +131,6 @@ span {
   display: flex;
   width: 100%;
   margin: 5px 0;
-  /* margin-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 5px;
-  margin-right: 5px; */
   border: 1px solid lightgrey;
 }
 .icon-search {
@@ -140,18 +150,28 @@ span {
   width: 300px;
   height: 500px;
   padding: 5px;
-  border: 2px solid grey;
-  /* background-color: yellow; */
+  border: 1px solid grey;
   overflow-y: scroll;
 }
-.first-contact {
-  width: 280px;
-  height: 60px;
-  margin: 3px;
+.information-contact {
+  display: flex;
+  align-items: center;
   border: 1px solid lightgrey;
 }
+.contact-avatar {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  margin-right: 10px;
+}
 
-
+.avatar2 {
+  width: 100%;
+  max-height: 100%;
+}
+.contat-text {
+  padding: 5px;
+}
 
 
 

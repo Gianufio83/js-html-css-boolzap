@@ -10,21 +10,36 @@ body {
 
 }
 .big-header {
-  width: 100%:auto;
+  width: 100%;
   height: 100px;
   background-color: rgb(33, 142, 119);
   position: relative;
 }
 .wrapper {
-  
   width: 900px;
   height: 700px;
-  background: #25FF00;
+  background: white;
   margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -300px;
   margin-left: -450px;
-
+}
+.float-left {
+  float: left;
+  height: 700px;
+  width: 300px;
+  background-color: lightgrey;
+}
+.float-right {
+  float:right;
+  height: 700px;
+  width: 600px;
+  background-color: lightblue;
+}
+.wrapper::after {
+  content:'';
+  display:table;
+  clear:both;
 }

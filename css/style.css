@@ -201,8 +201,7 @@ span {
 .box-3 {
   margin-left: 00px;
   padding-top: 5px;
-  padding-left: 180px;
-  /* width: 250px; */
+  padding-left: 250px;
   line-height: 20px;
 }
 .contact-choise-icon {
@@ -220,5 +219,47 @@ span {
 .message {
   width: 600px;
   height: 85px;
-  background-color: green;
+  background-color: rgb(216, 227, 213);
+}
+.message-container {
+  min-width: 580px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.box-4 {
+  padding-right: 15px;
+  width: 25%;
+  text-align: center;
+  line-height: 20px;
+}
+.box-5 {
+  margin-top: 10px;
+  padding: 0 15px;
+  width: 90%;
+}
+
+.box-6 {
+  padding-right: 20px;
+  width: 25%;
+  text-align: center;
+  line-height: 20px;
+}
+.face {
+  width: 20%;
+  vertical-align: middle;
+  font-size: 30px;
+  color: grey;
+
+}
+.input-message {
+  border: 5px solid lightblue;
+  width: 400px;
+  height: 50px;
+}
+.send-text {
+  width: 15%;
+  vertical-align: middle;
+  font-size: 30px;
+  color: grey;
 }

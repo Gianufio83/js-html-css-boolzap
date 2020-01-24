@@ -5,9 +5,11 @@
 }
 
 body {
+  width: 100%;
+  height: 100vh;
   font-size: 16px;
   background-color: rgba(86, 94, 86, 0.44);
-
+  font-family: 'Lato', sans-serif;
 }
 .big-header {
   width: 100%;
@@ -38,19 +40,21 @@ body {
   height: 100%;
   width: 600px;
   background-color: #e5ddd5;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 .wrapper::after {
   content:'';
   display:table;
   clear:both;
 }
+
 .icons {
   width: 300px;
   height: 80px;
-  background-color: lightgrey;
+  background-color: rgb(234, 234, 234);
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 
 }
 .box-1 {
@@ -167,6 +171,8 @@ span {
 .avatar2 {
   width: 100%;
   max-height: 100%;
+  padding-top: 5px;
+  margin-top: 5px;
 }
 .contat-text {
   padding: 5px;
@@ -190,17 +196,30 @@ span {
 .contact {
   width: 600px;
   height: 80px;
-  background-color: lightgrey;
+  background-color: rgb(234, 234, 234);
+}
+.contat-text h3 {
+  font-weight: bold;
+}
+.contat-text {
+  font-weight: bold;
+}
+.undertitle {
+  font-weight: normal;
+}
+small {
+  font-weight: normal;
 }
 .contact-choise {
   width: 100%;
   display: flex;
+  /* justify-content: space-around; */
   align-items: center;
 
 }
 .box-3 {
   margin-left: 00px;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-left: 180px;
   line-height: 20px;
 }
@@ -208,22 +227,59 @@ span {
   color:grey;
   font-size: 30px;
 }
+
 .bg-conversation {
-  width: 600px;
+  width: 100%;
   height: 530px;
   opacity: 0.5;
+  overflow: hidden;
 
 }
 .conversation {
-
+  /* display: none; */
+  width: 100%;
+  height: calc(100% - 180px);
+  background-color: lightgrey;
+  overflow-y: scroll;
 }
+.active {
+  display: block;
+}
+
 .message {
+  min-width: 30%;
+  max-width: 60%;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.message-top {
+  display: flex;
+  justify-content: space-between;
+}
+.message-bottom {
+  text-align: right;
+}
+.message.sent {
+  float: right;
+  clear: both;
+  background-color: green;
+}
+
+.message.received {
+  float: left;
+  clear: both;
+  background: white;
+}
+
+.write {
   width: 600px;
   height: 85px;
   background-color: rgb(216, 227, 213);
 }
-.message-container {
+.write-container {
   min-width: 580px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -267,16 +323,19 @@ span {
   font-size: 30px;
   color: grey;
 }
+
+
 .template {
   display:none;
 }
 
 /* .green-message {
-  max-width: 20%;
+  z-index: 0;
+  /* max-width: 20%;
   max-height: 50%;
-  background-color: green;
-} */
-.btn {
+  background-color: green; */
+/* }
+/* .btn {
   display: inline-block;
   font-size: 15px;
   color:black;
@@ -285,4 +344,4 @@ span {
   border-radius: 10px;
   padding: 5px;
   /* transition: all 2s linear 1s */
-}
+} */

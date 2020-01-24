@@ -274,7 +274,7 @@ small {
 
 .write {
   width: 600px;
-  height: 200px;
+  /* height: 200px; */
   background-color: rgb(216, 227, 213);
 }
 .write-container {

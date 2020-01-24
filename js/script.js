@@ -15,7 +15,7 @@ function sendMessage() {
     newMessage.find('.message-text').text(textMessage);
 
     newMessage.find('.message-time').text(time);
-    newMessage.addClass('.sent');
+    newMessage.addClass('sent');
     $('.conversation').append(newMessage);
 
     var data = new Date();

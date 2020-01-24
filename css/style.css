@@ -201,7 +201,7 @@ span {
 .box-3 {
   margin-left: 00px;
   padding-top: 5px;
-  padding-left: 250px;
+  padding-left: 180px;
   line-height: 20px;
 }
 .contact-choise-icon {
@@ -227,6 +227,9 @@ span {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.bg-conversation {
+  z-index: -1;
 }
 .box-4 {
   padding-right: 15px;
@@ -266,7 +269,20 @@ span {
 }
 .template {
   display:none;
+}
+
+/* .green-message {
   max-width: 20%;
   max-height: 50%;
   background-color: green;
+} */
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  color:black;
+  background-color: green;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 5px;
+  /* transition: all 2s linear 1s */
 }

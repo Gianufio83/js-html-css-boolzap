@@ -2,7 +2,7 @@ $(document).ready(function () {
   $('.send-text').click(function () {
     sendMessage();
   });
-  setTimeout(getAnswer, 1000);
+
 });
 
 function sendMessage() {
@@ -15,7 +15,7 @@ function sendMessage() {
     newMessage.find('.message-text').text(textMessage);
 
     newMessage.find('.message-time').text(time);
-    newMessage.addClass('sent');
+    newMessage.addClass('.sent');
     $('.conversation').append(newMessage);
 
     var data = new Date();
@@ -24,6 +24,7 @@ function sendMessage() {
     var time = hours +':'+ minutes;
 
     $('.input-message').val('');
+    setTimeout(getAnswer, 1000);
   }
 }
 
@@ -37,13 +38,20 @@ function addZero(number) {
 // Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
 
 function getAnswer() {
-  var sendText = $('.sent');
-  if (sendText == true) {
-    var newAnswerText = $('.template .message').clone();
-    newAnswerText.find('.message-text').text('OK');
-    newAnswerText.addClass('received');
-    $('.conversation').append(newMessage);
-  }
+  var newAnswerText = $('.template .message').clone();
+  newAnswerText.find('.message-text').text('OK');
+  newAnswerText.addClass('received');
+  $('.conversation').append(newAnswerText);
+
+  newAnswerText.find('.message-time').text(time);
+  newAnswerText.addClass('sent');
+  $('.conversation').append(newAnsweText);
+
+  var data = new Date();
+  var hours = addZero(data.getHours());
+  var minutes = addZero(data.getMinutes());
+  var time = hours +':'+ minutes;
+
 }
 
 

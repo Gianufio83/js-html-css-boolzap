@@ -45,12 +45,16 @@ function getAnswer() {
 
   newAnswerText.find('.message-time').text(time);
   newAnswerText.addClass('sent');
-  $('.conversation').append(newAnsweText);
+  $('.conversation').append(newAnswerText);
 
   var data = new Date();
   var hours = addZero(data.getHours());
   var minutes = addZero(data.getMinutes());
   var time = hours +':'+ minutes;
+}
+function findContacts() {
+  var search = $('#search-name').val();
+  console.log(search);
 
 }
 

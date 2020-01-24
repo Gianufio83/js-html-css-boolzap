@@ -195,7 +195,7 @@ span {
 } */
 .contact {
   width: 600px;
-  height: 80px;
+  /* height: 80px; */
   background-color: rgb(234, 234, 234);
 }
 .contat-text h3 {
@@ -238,7 +238,7 @@ small {
 .conversation {
   /* display: none; */
   width: 100%;
-  height: calc(100% - 180px);
+  height: calc(600px - 60px);
   background-color: lightgrey;
   overflow-y: scroll;
 }
@@ -274,7 +274,7 @@ small {
 
 .write {
   width: 600px;
-  height: 85px;
+  height: 200px;
   background-color: rgb(216, 227, 213);
 }
 .write-container {

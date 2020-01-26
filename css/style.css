@@ -40,7 +40,7 @@ body {
   height: 100%;
   width: 600px;
   background-color: #e5ddd5;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 .wrapper::after {
   content:'';
@@ -239,7 +239,7 @@ small {
 .conversation {
   /* display: none; */
   width: 100%;
-  height: calc(100% - 60px);
+  height: calc(100% - 80px);
   background-color: lightgrey;
   /* padding-bottom: 30px; */
   /* overflow-y: scroll; */

@@ -46,7 +46,7 @@ function getAnswer() {
   $('.conversation').append(newAnswerText);
 
   newAnswerText.find('.message-time').text(time);
-  newAnswerText.addClass('sent');
+  newAnswerText.addClass('received');
   $('.conversation').append(newAnswerText);
 
   var data = new Date();
@@ -54,27 +54,29 @@ function getAnswer() {
   var minutes = addZero(data.getMinutes());
   var time = hours +':'+ minutes;
 }
-function findContacts() {
 
+function findContacts() {
   var search = $('#search-name').val().toLowerCase();
   console.log(search);
-  var contacts = $('.contat-text');
+  var contacts = $('.contat-text > h3').text();
   console.log(contacts);
+  // var division = contacts.split();
+  // console.log(division);
 
-  contacts.each (
+
+
+  $('contacts').each(
     function() {
-      var contactName =
-      $(this).find('h3').text().toLowerCase();
+      var contactName = $(this).text();
       console.log(contactName);
-      if (contactName.includes(search) == true) {
-        contactName.show();
+      search = true
+      if (contacts.includes(contactName) == true && search == true) {
         console.log(contactName);
-      } else if (contactName.includes(search) == false){
-        contactName.hide();
       }
-      return ;
-    })
-    console.log(contactName);
+      return contactName
+    });
+
+    // console.log(contacts);
 
 }
 

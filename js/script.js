@@ -2,7 +2,9 @@ $(document).ready(function () {
   $('.send-text').click(function () {
     sendMessage();
   });
-
+  $('.icon-search').click(function () {
+    findContacts();
+  })
 });
 
 function sendMessage() {
@@ -53,8 +55,26 @@ function getAnswer() {
   var time = hours +':'+ minutes;
 }
 function findContacts() {
-  var search = $('#search-name').val();
+
+  var search = $('#search-name').val().toLowerCase();
   console.log(search);
+  var contacts = $('.contat-text');
+  console.log(contacts);
+
+  contacts.each (
+    function() {
+      var contactName =
+      $(this).find('h3').text().toLowerCase();
+      console.log(contactName);
+      if (contactName.includes(search) == true) {
+        contactName.show();
+        console.log(contactName);
+      } else if (contactName.includes(search) == false){
+        contactName.hide();
+      }
+      return ;
+    })
+    console.log(contactName);
 
 }
 

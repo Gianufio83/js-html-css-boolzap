@@ -5,6 +5,9 @@ $(document).ready(function () {
   $('.icon-search').click(function () {
     findContacts();
   })
+  $('contact-text').click(function () {
+    matchConversations();
+  })
 });
 
 function sendMessage() {
@@ -58,25 +61,32 @@ function getAnswer() {
 function findContacts() {
   var search = $('input').val().toLowerCase();
   console.log(search);
-  var contacts = $('.contat-text > .name').text();
+  var contacts = $('.information-contact federico');
   console.log(contacts);
 
-  $('contacts').each(
+  $('.contacts').each(
     function() {
-      var contactName = $(this).text().toLowerCase();
+      var contactName = $(this).find('.name').text().toLowerCase();
       console.log(contactName);
       if (contactName.includes(search) == true) {
         $('.name').show();
       } else {
         $('.name').hide();
       }
+      return contactName;
     });
 
 }
 // Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire nuovi messaggi per ogni conversazione
 // Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 
-
+function matchConversations() {
+  var selection = $('.contact-text');
+  var thisPosition = $(this).index();
+  var conversation = $('conversation .active').eq(thisposition);
+  $('conversation[data-contact]').removeCalss('.active');
+  conversation.addClass('active');
+}
 
 
 

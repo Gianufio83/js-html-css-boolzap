@@ -12,19 +12,17 @@ $(document).ready(function () {
     // console.log("pannello: ", pannelloConversazione);
     $('.conversation').removeClass('active');
     pannelloConversazione.addClass('active');
-    // var contatto = $(this).find('.information-contact');
-    // var header = $(this).find()
-    // contatto.find('name-selected').text();
-    // $('.contact.clicked').append(contatto);
-  });
-  $('.information-contact').click(function() {
 
+
+  });
+    $('.information-contact').click(function() {
+      var contenuto = $(this).find('name').text();
+      $('contact').find('name-selected').text(contenuto);
   })
 });
 
 function sendMessage() {
   var textMessage = $('.input-message').val();
-  // $('input.input-message').val('');
   if(textMessage.length != 0) {
     var newMessage = $('.template .message').clone();
     console.log(newMessage);
@@ -33,7 +31,7 @@ function sendMessage() {
 
     newMessage.find('.message-time').text(time);
     newMessage.addClass('sent');
-    $('.conversation .active').append(newMessage);
+    $('.conversations').append(newMessage);
 
     var data = new Date();
     var hours = addZero(data.getHours());
@@ -62,7 +60,7 @@ function getAnswer() {
 
   newAnswerText.find('.message-time').text(time);
   newAnswerText.addClass('received');
-  $('.conversation .active').append(newAnswerText);
+  $('.conversations').append(newAnswerText);
 
   var data = new Date();
   var hours = addZero(data.getHours());

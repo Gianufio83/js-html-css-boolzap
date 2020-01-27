@@ -194,9 +194,13 @@ span {
   background-color: rgba(0,0,0,0.5);
 } */
 .contact {
+  display:block
   width: 600px;
   height: 80px;
   background-color: rgb(234, 234, 234);
+}
+.contact.clicked {
+  display: none;
 }
 .contat-text h3 {
   font-weight: bold;
@@ -338,6 +342,9 @@ small {
   display:none;
 }
 
+.contact.clicked {
+  display: none;
+}
 /* .green-message {
   z-index: 0;
   /* max-width: 20%;

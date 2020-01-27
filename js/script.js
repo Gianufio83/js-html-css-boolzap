@@ -12,6 +12,11 @@ $(document).ready(function () {
     console.log("pannello: ", pannelloConversazione);
     $('.conversation').removeClass('active');
     pannelloConversazione.addClass('active');
+    var contatto = $(this).find('.information-contact');
+    console.log(contatto);
+    // contatto.find('name-selected').text();
+    // $('.contact.clicked').append(contatto);
+
 
   })
 });

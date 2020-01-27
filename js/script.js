@@ -9,14 +9,15 @@ $(document).ready(function () {
     var conversazione = $(this).attr('data-conversazione');
     console.log(conversazione);
     var pannelloConversazione = $('.conversation[data-contact="' + conversazione + '"]' );
-    console.log("pannello: ", pannelloConversazione);
+    // console.log("pannello: ", pannelloConversazione);
     $('.conversation').removeClass('active');
     pannelloConversazione.addClass('active');
-    var contatto = $(this).find('.information-contact');
-    console.log(contatto);
+    // var contatto = $(this).find('.information-contact');
+    // var header = $(this).find()
     // contatto.find('name-selected').text();
     // $('.contact.clicked').append(contatto);
-
+  });
+  $('.information-contact').click(function() {
 
   })
 });

@@ -5,7 +5,7 @@ $(document).ready(function () {
   $('.icon-search').click(function () {
     findContacts();
   })
-  $('contact-text').click(function () {
+  $('.information-contact').click(function () {
     matchConversations();
   })
 });
@@ -81,9 +81,13 @@ function matchConversations() {
   var selection = $('.information-contact');
   console.log(selection);
   var thisPosition = $(this).index();
-  var conversation = $('conversation .active').eq(thisposition);
-  $('conversation[data-contact]').removeCalss('.active');
-  conversation.addClass('active');
+  console.log(thisPosition);
+  var conversation = $('.conversation  .active').eq(thisPosition);
+  console.log(conversation);
+  conversation.show();
+
+  // $('conversation[data-contact]').removeCalss('.active');
+  // conversation.addClass('active');
 }
 
 

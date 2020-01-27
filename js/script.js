@@ -61,17 +61,17 @@ function getAnswer() {
 function findContacts() {
   var search = $('input').val().toLowerCase();
   console.log(search);
-  var contacts = $('.information-contact federico');
-  console.log(contacts);
+  // var contacts = $('.information-contact federico');
+  // console.log(contacts);
 
-  $('.contacts').each(
+  $('.information-contact').each(
     function() {
       var contactName = $(this).find('.name').text().toLowerCase();
       console.log(contactName);
       if (contactName.includes(search) == true) {
-        $('.name').show();
+        $(this).show();
       } else {
-        $('.name').hide();
+        $(this).hide();
       }
       return contactName;
     });

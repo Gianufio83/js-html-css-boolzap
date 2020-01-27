@@ -18,7 +18,7 @@ function sendMessage() {
 
     newMessage.find('.message-time').text(time);
     newMessage.addClass('sent');
-    $('.conversation').append(newMessage);
+    $('.conversation .active').append(newMessage);
 
     var data = new Date();
     var hours = addZero(data.getHours());
@@ -42,12 +42,12 @@ function addZero(number) {
 function getAnswer() {
   var newAnswerText = $('.template .message').clone();
   newAnswerText.find('.message-text').text('OK');
-  newAnswerText.addClass('received');
-  $('.conversation').append(newAnswerText);
+  // newAnswerText.addClass('received');
+  // $('.conversation').append(newAnswerText);
 
   newAnswerText.find('.message-time').text(time);
   newAnswerText.addClass('received');
-  $('.conversation').append(newAnswerText);
+  $('.conversation .active').append(newAnswerText);
 
   var data = new Date();
   var hours = addZero(data.getHours());
@@ -56,25 +56,25 @@ function getAnswer() {
 }
 
 function findContacts() {
-  var search = $('#search-name').val().toLowerCase();
+  var search = $('input').val().toLowerCase();
   console.log(search);
-  var contacts = $('.contat-text > h3').text();
+  var contacts = $('.contat-text > .name').text();
   console.log(contacts);
 
   $('contacts').each(
     function() {
-      var contactName = $(this).text();
+      var contactName = $(this).text().toLowerCase();
       console.log(contactName);
-      search = true
-      if (contacts.includes(contactName) == true && search == true) {
-        console.log(contactName);
+      if (contactName.includes(search) == true) {
+        $('.name').show();
+      } else {
+        $('.name').hide();
       }
-      return contactName
     });
 
-    // console.log(contacts);
-
 }
+// Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire nuovi messaggi per ogni conversazione
+// Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 
 
 

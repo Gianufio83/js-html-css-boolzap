@@ -61,9 +61,6 @@ function getAnswer() {
 function findContacts() {
   var search = $('input').val().toLowerCase();
   console.log(search);
-  // var contacts = $('.information-contact federico');
-  // console.log(contacts);
-
   $('.information-contact').each(
     function() {
       var contactName = $(this).find('.name').text().toLowerCase();
@@ -75,13 +72,14 @@ function findContacts() {
       }
       return contactName;
     });
-
+    $('.input').val('');
 }
 // Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire nuovi messaggi per ogni conversazione
 // Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 
 function matchConversations() {
-  var selection = $('.contact-text');
+  var selection = $('.information-contact');
+  console.log(selection);
   var thisPosition = $(this).index();
   var conversation = $('conversation .active').eq(thisposition);
   $('conversation[data-contact]').removeCalss('.active');

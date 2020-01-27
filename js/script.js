@@ -60,10 +60,6 @@ function findContacts() {
   console.log(search);
   var contacts = $('.contat-text > h3').text();
   console.log(contacts);
-  // var division = contacts.split();
-  // console.log(division);
-
-
 
   $('contacts').each(
     function() {

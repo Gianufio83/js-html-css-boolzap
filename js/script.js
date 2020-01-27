@@ -6,7 +6,13 @@ $(document).ready(function () {
     findContacts();
   })
   $('.information-contact').click(function () {
-    matchConversations();
+    var conversazione = $(this).attr('data-conversazione');
+    console.log(conversazione);
+    var pannelloConversazione = $('.conversation[data-contact="' + conversazione + '"]' );
+    console.log("pannello: ", pannelloConversazione);
+    $('.conversation').removeClass('active');
+    pannelloConversazione.addClass('active');
+
   })
 });
 
@@ -77,18 +83,6 @@ function findContacts() {
 // Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire nuovi messaggi per ogni conversazione
 // Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 
-function matchConversations() {
-  var selection = $('.information-contact');
-  console.log(selection);
-  var thisPosition = $(this).index();
-  console.log(thisPosition);
-  var conversation = $('.conversation  .active').eq(thisPosition);
-  console.log(conversation);
-  conversation.show();
-
-  // $('conversation[data-contact]').removeCalss('.active');
-  // conversation.addClass('active');
-}
 
 
 

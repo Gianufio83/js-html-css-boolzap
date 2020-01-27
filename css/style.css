@@ -236,16 +236,21 @@ small {
   overflow: hidden;
 
 }
-.conversation {
-  /* display: none; */
+.conversations {
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100% - 160px);
+  overflow-y: scroll;
+}
+.conversation {
+  display: none;
+  width: 100%;
+  min-height: 100%;
   background-color: lightgrey;
   /* padding-bottom: 30px; */
   /* overflow-y: scroll; */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-.active {
+.conversation.active {
   display: block;
 }
 

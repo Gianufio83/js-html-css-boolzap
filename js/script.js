@@ -18,7 +18,18 @@ $(document).ready(function () {
     $('.information-contact').click(function() {
       var contenuto = $(this).find('name').text();
       $('contact').find('name-selected').text(contenuto);
-  })
+  });
+  $(document).on('click', '.message-options', function() {
+    //toggleclass sull'elemento dropdown cliccato
+    $(this).parent().siblings('.message-link').toggleClass('active');
+    //togliamo la classe active ai dropdown di tutti gli altri message-link
+    $(this).parents('.message').siblings('.message').find('.message-link').removeClass('active');
+  });
+  $(document).on('click', '.message-delete',
+  function(){
+    $(this).parents('.message').remove();
+
+})
 });
 
 function sendMessage() {

@@ -32,9 +32,9 @@ $(document).ready(function () {
 
   });
     $('.input-message').focus(function() {
-      $('.send-text i').removeClass('fas fa-location-arrow').addClass('fas fa-microphone');
-    }).blur(function() {
       $('.send-text i').removeClass('fas fa-microphone').addClass('fas fa-location-arrow');
+    }).blur(function() {
+      $('.send-text i').removeClass('fas fa-location-arrow').addClass('fas fa-microphone');
     });
 });
 // funzione invio messaggio

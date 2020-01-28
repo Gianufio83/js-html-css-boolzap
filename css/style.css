@@ -249,7 +249,7 @@ small {
   display: none;
   width: 100%;
   min-height: 100%;
-  background-color: rgba(117, 113, 113, 0.85);
+  /* background-color: rgba(86, 94, 86, 0.44); */
 
 }
 .conversation.active {

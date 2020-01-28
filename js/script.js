@@ -12,13 +12,15 @@ $(document).ready(function () {
     // console.log("pannello: ", pannelloConversazione);
     $('.conversation').removeClass('active');
     pannelloConversazione.addClass('active');
+    var name = $(this).find('.name').text();
+    $('.contat-text .name-selected').text(name);
 
 
   });
-    $('.information-contact').click(function() {
-      var contenuto = $(this).find('name').text();
-      $('contact').find('name-selected').text(contenuto);
-  });
+  //   $('.information-contact').click(function() {
+  //     var contenuto = $(this).find('name').text();
+  //     $('contact').find('name-selected').text(contenuto);
+  // });
   $(document).on('click', '.message-options', function() {
     //toggleclass sull'elemento dropdown cliccato
     $(this).parent().siblings('.message-link').toggleClass('active');

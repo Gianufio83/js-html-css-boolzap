@@ -1,10 +1,11 @@
 $(document).ready(function () {
   $('.send-text').click(function () {
-    sendMessage();
+    sendMessage(); // funzione invio messaggio
   });
   $('.icon-search').click(function () {
-    findContacts();
+    findContacts(); // funzione cerca il contatto
   })
+  //  funzione al contatto mostra la conversazione
   $('.information-contact').click(function () {
     var conversazione = $(this).attr('data-conversazione');
     console.log(conversazione);
@@ -14,6 +15,8 @@ $(document).ready(function () {
     pannelloConversazione.addClass('active');
     var name = $(this).find('.name').text();
     $('.contat-text .name-selected').text(name);
+    var hour = $(this).find('.hours').text();
+    $('.contat-text .timing').text(''+ hour);
   });
 
     $(document).on('click', '.message-options', function() {
@@ -22,13 +25,19 @@ $(document).ready(function () {
     //togliamo la classe active ai dropdown di tutti gli altri message-link
       $(this).parents('.message').siblings('.message').find('.message-link').removeClass('active');
   });
+    // viene cancellato il messaggio
     $(document).on('click', '.message-delete',
     function(){
       $(this).parents('.message').remove();
 
   });
+    $('input-message').focus(function() {
+      $('.send-text i').removeCass('fas fa-location-arrow').addClass('fas fa-microphone');
+    }).blur(function() {
+      $('.box-6 i').removeCass('fas fa-microphone').addClass('fas fa-location-arrow');
+    });
 });
-
+// funzione invio messaggio
 function sendMessage() {
   var textMessage = $('.input-message').val();
   if(textMessage.length != 0) {
@@ -57,9 +66,8 @@ function addZero(number) {
   }
   return number;
 }
-// Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
-// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
 
+//  funzione risposta messaggio
 function getAnswer() {
   var newAnswerText = $('.template .message').clone();
   newAnswerText.find('.message-text').text('OK');
@@ -76,6 +84,7 @@ function getAnswer() {
   var time = hours +':'+ minutes;
 }
 
+// funzione che cerca tra i contatti
 function findContacts() {
   var search = $('input').val().toLowerCase();
   console.log(search);
@@ -92,8 +101,6 @@ function findContacts() {
     });
     $('.input').val('');
 }
-// Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire nuovi messaggi per ogni conversazione
-// Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 
 
 

@@ -169,7 +169,7 @@ span {
 }
 
 .avatar2 {
-  width: 100%;
+  /* width: 100%; */
   max-height: 100%;
   padding-top: 5px;
   margin-top: 5px;
@@ -177,7 +177,10 @@ span {
 .contat-text {
   padding: 5px;
 }
-
+.hours {
+  padding-left: 75px;
+  color: grey;
+}
 .federico:hover,
 .federico:active,
 .federico:focus {
@@ -249,8 +252,6 @@ small {
   display: none;
   width: 100%;
   min-height: 100%;
-  /* overflow-y: scroll; */
-  /* background-color: rgba(86, 94, 86, 0.44); */
 
 }
 .conversation.active {
@@ -347,28 +348,30 @@ small {
 
 .box-6 {
   padding-right: 20px;
+  padding-top: 5px;
   width: 25%;
   text-align: center;
-  line-height: 20px;
+  vertical-align: middle;
 }
+.send-text {
+  font-size: 30px;
+  color: grey;
+  line-height: 40px;
+}
+
 .face {
   width: 20%;
   vertical-align: middle;
   font-size: 30px;
   color: grey;
-
 }
+
 .input-message {
   border: 5px solid lightblue;
   width: 400px;
   height: 50px;
 }
-.send-text {
-  width: 15%;
-  vertical-align: middle;
-  font-size: 30px;
-  color: grey;
-}
+
 
 
 .template {

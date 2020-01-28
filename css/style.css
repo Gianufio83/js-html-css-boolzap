@@ -184,8 +184,8 @@ span {
 .federico:hover,
 .federico:active,
 .federico:focus {
-  opacity: 0.9;
-  background-color: grey;
+  opacity: 0.8;
+  background-color: lightgrey;
 }
 /* .overlay {
   position: absolute;

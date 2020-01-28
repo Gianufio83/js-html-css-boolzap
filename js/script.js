@@ -29,7 +29,7 @@ $(document).ready(function () {
   function(){
     $(this).parents('.message').remove();
 
-})
+  });
 });
 
 function sendMessage() {

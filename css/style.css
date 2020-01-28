@@ -249,11 +249,13 @@ small {
   display: none;
   width: 100%;
   min-height: 100%;
+  /* overflow-y: scroll; */
   /* background-color: rgba(86, 94, 86, 0.44); */
 
 }
 .conversation.active {
   display: block;
+
 }
 
 .message {

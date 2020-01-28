@@ -14,22 +14,17 @@ $(document).ready(function () {
     pannelloConversazione.addClass('active');
     var name = $(this).find('.name').text();
     $('.contat-text .name-selected').text(name);
-
-
   });
-  //   $('.information-contact').click(function() {
-  //     var contenuto = $(this).find('name').text();
-  //     $('contact').find('name-selected').text(contenuto);
-  // });
-  $(document).on('click', '.message-options', function() {
+
+    $(document).on('click', '.message-options', function() {
     //toggleclass sull'elemento dropdown cliccato
-    $(this).parent().siblings('.message-link').toggleClass('active');
+      $(this).parent().siblings('.message-link').toggleClass('active');
     //togliamo la classe active ai dropdown di tutti gli altri message-link
-    $(this).parents('.message').siblings('.message').find('.message-link').removeClass('active');
+      $(this).parents('.message').siblings('.message').find('.message-link').removeClass('active');
   });
-  $(document).on('click', '.message-delete',
-  function(){
-    $(this).parents('.message').remove();
+    $(document).on('click', '.message-delete',
+    function(){
+      $(this).parents('.message').remove();
 
   });
 });
@@ -44,7 +39,7 @@ function sendMessage() {
 
     newMessage.find('.message-time').text(time);
     newMessage.addClass('sent');
-    $('.conversations').append(newMessage);
+    $('.conversation.active').append(newMessage);
 
     var data = new Date();
     var hours = addZero(data.getHours());
@@ -73,7 +68,7 @@ function getAnswer() {
 
   newAnswerText.find('.message-time').text(time);
   newAnswerText.addClass('received');
-  $('.conversations').append(newAnswerText);
+  $('.conversation.active').append(newAnswerText);
 
   var data = new Date();
   var hours = addZero(data.getHours());

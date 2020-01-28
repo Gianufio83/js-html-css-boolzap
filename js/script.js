@@ -2,7 +2,7 @@ $(document).ready(function () {
   $('.send-text').click(function () {
     sendMessage(); // funzione invio messaggio
   });
-  $('.icon-search').click(function () {
+  $('.input').keyup(function () {
     findContacts(); // funzione cerca il contatto
   })
   //  funzione al contatto mostra la conversazione
@@ -31,10 +31,10 @@ $(document).ready(function () {
       $(this).parents('.message').remove();
 
   });
-    $('input-message').focus(function() {
-      $('.send-text i').removeCass('fas fa-location-arrow').addClass('fas fa-microphone');
+    $('.input-message').focus(function() {
+      $('.send-text i').removeClass('fas fa-location-arrow').addClass('fas fa-microphone');
     }).blur(function() {
-      $('.box-6 i').removeCass('fas fa-microphone').addClass('fas fa-location-arrow');
+      $('.send-text i').removeClass('fas fa-microphone').addClass('fas fa-location-arrow');
     });
 });
 // funzione invio messaggio
@@ -99,7 +99,7 @@ function findContacts() {
       }
       return contactName;
     });
-    $('.input').val('');
+    // $('.input').val('');
 }
 
 
